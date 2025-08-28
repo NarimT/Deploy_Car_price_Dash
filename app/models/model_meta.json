@@ -1,0 +1,15 @@
+{
+  "features": [
+    "year",
+    "max_power",
+    "mileage",
+    "brand",
+    "fuel"
+  ],
+  "target_transform": "log",
+  "sklearn_version": "1.2.2",
+  "best_params": {
+    "regressor__max_depth": null,
+    "regressor__n_estimators": 200
+  }
+}
