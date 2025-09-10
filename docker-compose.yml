@@ -1,0 +1,16 @@
+services:
+  dash:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dash_app
+    ports:
+      - "8050:8050"  # Maps container port 8050 to localhost
+    volumes:
+      - ./code:/root/app/code       # Live reload for code
+      - ./models:/root/app/models   # Keep models in sync
+      - ./data:/root/app/data       # Keep data in sync
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8050
+    command: python3 code/app.py
